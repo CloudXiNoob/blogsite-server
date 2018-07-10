@@ -19,7 +19,7 @@ var articleSchema=new schema({
                     "response_name":String,
                     "response_email":String,
                     "response_content":String,
-                    "response_dataTime":String
+                    "response_dataTime":String,
                 }
             ]
         }

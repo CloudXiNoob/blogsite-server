@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsonwebtoken": "^8.3.0",
     "koa": "^2.5.1",
     "koa-route": "^3.2.0",
+    "md5": "^2.2.1",
     "mongoose": "^5.1.5",
     "route": "^0.2.5"
   }

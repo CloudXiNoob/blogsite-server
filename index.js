@@ -35,14 +35,14 @@ walk(models_path);
 require('babel-register');
 const Koa = require('koa');
 const logger = require('koa-logger');
-const session = require('koa-session');
 const bodyParser =require('koa-bodyparser');
+const koaCors = require("koa2-cors");
 const app = new Koa()
 
 app.keys = ['cloudxi'];
 app.use(logger());
-app.use(session(app));
 app.use(bodyParser());
+app.use(koaCors());
 
 /**
  * 使用路由转发请求

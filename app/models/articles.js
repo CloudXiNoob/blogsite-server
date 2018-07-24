@@ -2,7 +2,6 @@ const mongoose =require('mongoose');
 const schema=mongoose.Schema
 
 var article=new schema({
-    "articleId":String,
     "title":String,
     "tag":String,
     "desc":String,

@@ -15,8 +15,8 @@ var UserSchema = new Schema({
     unique: true,
     type: String
   },
+  userName: String,
   passWord:String,
-  nickname: String,
   avatar: String,
   meta: {
     createAt: {

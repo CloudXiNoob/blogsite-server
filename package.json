@@ -61,6 +61,7 @@
     "koa-router": "^7.4.0",
     "koa-session": "^5.8.2",
     "koa-static": "^4.0.2",
+    "koa2-cors": "^2.0.6",
     "log4js": "^2.4.1",
     "marked": "^0.3.12",
     "md5": "^2.2.1",

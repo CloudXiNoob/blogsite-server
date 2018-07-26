@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken'
-import conf from '../../../config'
 
 export default async(ctx, next) => {
     const authorization = ctx.get('Authorization');

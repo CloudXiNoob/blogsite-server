@@ -1,8 +1,8 @@
 'use strict'
 
 const Router = require('koa-router');
-const blog = require('../controllers/article')
-import * as $ from '../controllers/user.js'
+const blog = require('../controllers/article');
+import * as $ from '../controllers/user.js';
 import verify from '../middleware/auth/index.js';
  
 module.exports = function(){
@@ -14,6 +14,9 @@ module.exports = function(){
     // 登录
     router.post('/user/login',$.login)
     //新建文章
-    router.post('/article/create',verify,blog.createArticle)
+    router.post('/article/create',blog.createArticle);
+    router.post('/article/getAll',blog.getAllArticle);
+    router.post('/article/modify/:id',blog.modifyArticle);
+    router.post('/article/delete/:id',blog.deleteArticle);
     return router
 }

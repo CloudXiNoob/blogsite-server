@@ -5,14 +5,15 @@ var article=new schema({
     "title":String,
     "tag":String,
     "desc":String,
+    "content":String,
+    "publish":Boolean,
     "createTime":{
         type:Date,
         default:Date.now()
     },
     "lastEditTime":{
         type:Date,
-        default:Date.now,
+        default:Date.now(),
     },
-    "content":String
 },{versionKey:false});
 module.exports=mongoose.model('Article',article)

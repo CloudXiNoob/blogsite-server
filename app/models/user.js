@@ -15,17 +15,17 @@ var UserSchema = new Schema({
     unique: true,
     type: String
   },
-  userName: String,
+  nickname: String,
   passWord:String,
   avatar: String,
   meta: {
     createAt: {
       type: Date,
-      dafault: Date.now()
+      dafault: Date.now
     },
     updateAt: {
       type: Date,
-      dafault: Date.now()
+      dafault: Date.now
     }
   }
 })
@@ -33,10 +33,10 @@ var UserSchema = new Schema({
 // Defines a pre hook for the document.
 UserSchema.pre('save', function(next) {
   if (this.isNew) {
-    this.meta.createAt = this.meta.updateAt = Date.now()
+    this.meta.createAt = this.meta.updateAt = Date.now
   }
   else {
-    this.meta.updateAt = Date.now()
+    this.meta.updateAt = Date.now
   }
   next()
 })

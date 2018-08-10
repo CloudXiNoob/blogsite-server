@@ -37,12 +37,29 @@ const Koa = require('koa');
 const logger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 const koaCors = require("koa2-cors");
+// const serve = require('koa-static');
+// const formidable = require('koa-formidable');
 const app = new Koa()
 
 app.keys = ['cloudxi'];
 app.use(logger());
 app.use(bodyParser());
 app.use(koaCors());
+// app.use(serve(__dirname) + '/public') //设置静态文件
+// resolve(config[env].host + '/upload/' + avatarName)
+
+let mkdirs = (__dirname, callback) => {
+  fs.exists(dirname, function(exists) {
+    if (exists) {
+      callback();
+    } else {
+      mkdirs(path.dirname(dirname), function() {
+        fs.mkdir(dirname, callback)
+      })
+    }
+  })
+}
+
 
 /**
  * 使用路由转发请求

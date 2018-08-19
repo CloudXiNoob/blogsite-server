@@ -45,11 +45,10 @@ app.keys = ['cloudxi'];
 app.use(logger());
 app.use(bodyParser());
 app.use(koaCors());
-// app.use(serve(__dirname) + '/public') //设置静态文件
+// app.use(serve(__dirname) + '/public') //设置静态文 件
 // resolve(config[env].host + '/upload/' + avatarName)
 
-let mkdirs = (__dirname, callback) => {
-  fs.exists(dirname, function(exists) {
+let mkdirs = (__dirname, callback) => {21 fs.exists(dirname, function(exists) {
     if (exists) {
       callback();
     } else {
